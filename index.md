@@ -1,6 +1,19 @@
 ## Genetic Model From Basal Insects
 
-It is a collection of genetic and biological information on various basal insects.
+Insects have been a key model for various scientific discoveries. Basal insects, the Ametabolan and the Hemimetabolan have been critical to fields ranging from behavioural, neurological, robotics, and evolutionary biology. However, only two of the 19 major basal insect orders contain model laboratory species with established functional genetic tools. Here, we have selected some of the insects from Ametabola and Hemimetabola group and try to document the existing genetic resources and toolkits available and present the gaps which needs to address.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 and genetic informations and laboratory protocols
 You can use the [editor on GitHub](https://github.com/upendrabhattarai/GMFBI/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
