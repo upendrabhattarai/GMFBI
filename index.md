@@ -1,5 +1,8 @@
 ## Genetic Model From Basal Insects
 
+It is a collection of genetic and biological information on various basal insects.
+
+and genetic informations and laboratory protocols
 You can use the [editor on GitHub](https://github.com/upendrabhattarai/GMFBI/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
