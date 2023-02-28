@@ -1,0 +1,100 @@
+Assembly process for firebrat's genome.
+This is just the collection of my all the scritpts I have used in various times to process the assembly. This is not a pipeline.
+
+Received the data from Pacbio hifi as bam files.
+To convert these bamfiles into fastq, one can use samtools
+```
+#!/bin/bash
+#SBATCH -p test  # Partition to submit to (comma separated)
+#SBATCH -J samtools_1
+#SBATCH -c 10 
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=2gb
+#SBATCH --open-mode=append
+#SBATCH -t 00:20:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+module load samtools/1.10-fasrc01
+
+samtools fastq -@ 10 m64408e_230104_191438.hifi_reads.bam > m64408e_230104_191438.hifi_reads.fastq
+```
+Check the quality of data with fastqc
+```
+#!/bin/bash
+#SBATCH -p test #serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J fastqc_1
+#SBATCH -c 10 
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=1gb
+#SBATCH --open-mode=append
+#SBATCH -t 01:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+module load fastqc/0.11.8-fasrc01
+
+fastqc ../m64408e_230104_191438.hifi_reads.fastq -o ./
+```
+But converting bam files to fastq with samtools was not a part of my pipeline.
+I used longqc to check the data quality in bamfiles
+```
+#!/bin/bash
+#SBATCH -p test #serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J longqc_1
+#SBATCH -c 10 
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=15gb
+#SBATCH --open-mode=append
+#SBATCH -t 05:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+export PATH="/n/home12/upendrabhattarai/bin/long-qc/LongQC:$PATH"
+export PATH="/n/home12/upendrabhattarai/bin/miniconda3/bin:$PATH"
+python /n/home12/upendrabhattarai/bin/long-qc/LongQC/longQC.py sampleqc --index 200M -p 10 -d -x pb-sequel -o 1_A01_longqc ../1_A01/m64408e_230104_191438.hifi_reads.bam
+```
+
+I then used Hifiadapterfilter to trimout the adapters
+```
+#!/bin/bash
+#SBATCH -p test #serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J hifi.adapt.filt.1
+#SBATCH -c 6 
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=10gb
+#SBATCH --open-mode=append
+#SBATCH -t 05:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+module load bamtools/2.3.0-fasrc01
+module load GCC/8.2.0-2.31.1 OpenMPI/3.1.3 BLAST+/2.9.0
+module load GCCcore/8.2.0 pigz/2.4
+
+export PATH=$PATH:/n/home12/upendrabhattarai/bin/HiFiAdapterFilt
+export PATH=$PATH:/n/home12/upendrabhattarai/bin/HiFiAdapterFilt/DB
+
+bash pbadapterfilt.sh -p ../1_A01/m64408e_230104_191438 -t 6 -o 1_A_filt
+```
+
+
+I used hifiasm to assemble the reads with adapter removed reads
+
+```
+#!/bin/bash
+
+#SBATCH -p serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J hifiasm_1
+#SBATCH -c 32 
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=250gb
+#SBATCH --open-mode=append
+#SBATCH -t 3-00:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+export PATH="/n/home12/upendrabhattarai/bin/hifiasm:$PATH"
+hifiasm -o TdomV1.asm -t32 ../reads/*.fastq.gz
+```
+
