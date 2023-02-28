@@ -3,7 +3,7 @@ This is just the collection of my all the scritpts I have used in various times 
 
 Received the data from Pacbio hifi as bam files.
 To convert these bamfiles into fastq, one can use samtools
-```
+'''
 #!/bin/bash
 #SBATCH -p test  # Partition to submit to (comma separated)
 #SBATCH -J samtools_1
@@ -18,7 +18,7 @@ To convert these bamfiles into fastq, one can use samtools
 module load samtools/1.10-fasrc01
 
 samtools fastq -@ 10 m64408e_230104_191438.hifi_reads.bam > m64408e_230104_191438.hifi_reads.fastq
-```
+'''
 Check the quality of data with fastqc
 ```
 #!/bin/bash
