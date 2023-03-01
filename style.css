@@ -1,0 +1,128 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header styles */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+header a {
+  color: #fff;
+}
+
+header nav {
+  display: inline-block;
+  float: right;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* Hero styles */
+.hero {
+  background-image: url("hero-image.jpg");
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Featured section styles */
+.featured {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.featured h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.featured .article {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.featured .article img {
+  height: 200px;
+  width: 200px;
+}
+
+.featured .article .content {
+  margin-left: 20px;
+}
+
+.featured .article h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.featured .article p {
+  margin-bottom: 10px;
+}
+
+/* Categories section styles */
+.categories {
+  background-color: #eee;
+  padding: 40px;
+}
+
+.categories h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.categories .category {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  width: 200px;
+}
+
+.categories .category img {
+  height: 200px;
+  width: 100%;
+}
+
+.categories .category::after {
+  content: "";
+  display: block;
+  background
