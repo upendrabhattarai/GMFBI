@@ -1,3 +1,10 @@
-##theme: jekyll-theme-cayman
-##theme: jekyll-theme-minimal
-permalink: /upendrabhattarai.github.io/GMFBI
+# config.yml
+
+# ...
+
+repository:
+  name: <GMFBI>
+  url: https://github.com/upendrabhattarai/GMFBI
+  website: https://upendrabhattarai.github.io/GMFBI/
+
+
