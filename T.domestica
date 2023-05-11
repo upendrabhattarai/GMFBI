@@ -98,3 +98,26 @@ export PATH="/n/home12/upendrabhattarai/bin/hifiasm:$PATH"
 hifiasm -o TdomV1.asm -t32 ../reads/*.fastq.gz
 ```
 
+I needed to remove mitogenome from the assembly. Mitogenome has been already assembled for T.domestica. I downloaded that from the NCBI in genebank format.
+I installed MitoFinder from Github, the singularity and docker installation of MitoHiFi didn't work properly so had to install clonning the github repo.
+
+`MitoFinder.sh`
+```
+#!/bin/bash
+#SBATCH -p test #serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J mitohifi1
+#SBATCH -c 16 
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=50gb
+#SBATCH --open-mode=append
+#SBATCH -t 08:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+/n/holyscratch01/extavour_lab/Everyone/upendrabhattarai/bin/MitoFinder/mitofinder \
+-j TdomMito \
+-a ../../adapter.removed/hifiasm.v1/TdomV1.asm.bp.hap1.p_ctg.fasta \
+-r ../Thermobia_domestica_mitochondrion_complete_genome_NC_006080.1.gb \
+-p 16 -m 50Gb -o 1
+```
+
