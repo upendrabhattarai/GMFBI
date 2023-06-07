@@ -1,7 +1,11 @@
 List of chromosome level genome assemblies from Arthropoda
 source : i5k genome, genomes with scaffold_N50 above 1Mb only.
-Order | Family |Scientific Name | Common Name(s) | Genome ID (NCBI) | Contig N50 | Scaffold N50 | Genome Database(s) |
+
+Order | Family |Scientific Name | Common Name(s) | Genome ID (NCBI) | Contig N50 | Scaffold N50 | Genome Database(s)
+--- | --- | --- | --- | --- | --- | --- | --- 
 Diptera	| Culicidae	| Aedes aegypti	| yellow fever mosquito	| 44	| 11,758,062	| 409,777,670	| VectorBase; InsectBase
+
+
 Xiphosura	Limulidae	Tachypleus tridentatus	Chinese horseshoe crab; Japanese horseshoe crab	22334	1,644,156	169,002,194	
 Hemiptera	Aphididae	Acyrthosiphon pisum	pea aphid	448	25,858	132,544,852	BIPAA AphidBase; InsectBase
 Hemiptera	Aphididae	Rhopalosiphum maidis	corn leaf aphid	73043	9,046,396	93,298,903	
