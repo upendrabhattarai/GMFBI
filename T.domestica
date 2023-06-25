@@ -17,7 +17,10 @@ To convert these bamfiles into fastq, one can use samtools
 
 module load samtools/1.10-fasrc01
 
-samtools fastq -@ 10 m64408e_230104_191438.hifi_reads.bam > m64408e_230104_191438.hifi_reads.fastq
+for i in $(find ../1.raw_reads_pacbio_Tdom/ -type f -name "*.bam"); do
+        filename=$(basename "$i")
+        samtools fastq -@ 10 "$i" > "${filename%.*}.fastq"
+done
 '''
 Check the quality of data with fastqc
 ```
@@ -119,5 +122,126 @@ I installed MitoFinder from Github, the singularity and docker installation of M
 -a ../../adapter.removed/hifiasm.v1/TdomV1.asm.bp.hap1.p_ctg.fasta \
 -r ../Thermobia_domestica_mitochondrion_complete_genome_NC_006080.1.gb \
 -p 16 -m 50Gb -o 1
+```
+
+Mapping illumina paired end reads to the genome.
+
+```
+#!/bin/bash
+
+#SBATCH -p test #shared  # Partition to submit to (comma separated)
+#SBATCH -J bwa.mem
+#SBATCH -c 16
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=20gb
+#SBATCH --open-mode=append
+#SBATCH -t 04:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+
+#module load bwa/0.7.17-fasrc01
+
+#bwa index TdomV1.asm.bp.hap1.p_ctg.fasta
+
+#bwa mem -t 20 TdomV1.asm.bp.hap1.p_ctg.fasta SRR7665252_trim_1.fastq SRR7665252_trim_2.fastq > TdomV1.SRR.aln-pe.sam
+module load intel/2017c impi/2017.4.239 SAMtools/1.9
+#samtools sort -n -O sam TdomV1.SRR.aln-pe.sam | samtools fixmate -m -O bam - TdomV1.SRR.aln-pe.sorted.fixmate.bam
+#samtools sort -O bam -o TdomV1.SRR.aln-pe.fixmate.sorted.bam TdomV1.SRR.aln-pe.sorted.fixmate.bam --threads 16
+#samtools markdup -r -S TdomV1.SRR.aln-pe.fixmate.sorted.bam TdomV1.SRR.aln-pe.fixmate.sorted.dedup.bam --threads 16
+samtools flagstat TdomV1.SRR.aln-pe.fixmate.sorted.dedup.bam --threads 16
+```
+Estimating the genome size with illumina reads
+```
+#!/bin/bash
+
+#SBATCH -p serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J jellyfish
+#SBATCH -c 6
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=100gb
+#SBATCH --open-mode=append
+#SBATCH -t 03:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+
+module load intel/2017c impi/2017.4.239 Jellyfish/2.2.10
+
+jellyfish count -C -m 21 -s 1000000000 -t 10 *.fastq -o reads.jf
+#jellyfish count -t 6 -C -m 21 -s 20G -o 21mer_out --min-quality=30 SRR7665252_trim_1.fastq SRR7665252_trim_2.fastq
+```
+Pbmm2 alignment
+```
+#!/bin/bash
+
+#SBATCH -p serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J pbmm2.1
+#SBATCH -c 20
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=80gb
+#SBATCH --open-mode=append
+#SBATCH -t 3-00:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+export PATH="/n/home12/upendrabhattarai/bin/miniconda3/bin:$PATH"
+pbmm2 align --preset CCS \
+        ../../adapter.removed/hifiasm.v1/TdomV1.asm.bp.hap1.p_ctg.fasta \
+        ../../1_A01/m64408e_230104_191438.hifi_reads.bam \
+        pbmm2.1_A01.aligned.all.bam \
+        --sort -j 20 -J 20
+```
+
+merge all the bam files and index it
+```
+
+#SBATCH -p serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J pbtkmerge
+#SBATCH -c 10
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=50gb
+#SBATCH --open-mode=append
+#SBATCH -t 1-00:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+#export PATH="/n/home12/upendrabhattarai/bin/miniconda3/bin:$PATH"
+#pbmerge -o merged.bam \
+#../1/pbmm2.1_A01.aligned.all.bam \
+#../2/pbmm2.2_B01.aligned.all.bam \
+#../3/pbmm2.3_C01.aligned.all.bam \
+#../4/pbmm2.4_D01.aligned.all.bam
+
+#pbindex merged.bam -j 10
+# pbindex produced .pbi file not .bai file as index so using samtool for this
+
+module load GCC/8.2.0-2.31.1 SAMtools/1.9
+#samtools sort merged.bam -o merged.sorted.bam -@ 10
+
+samtools index merged.sorted.bam -@ 10
+```
+cpg calling
+```
+#!/bin/bash
+
+#SBATCH -p serial_requeue # Partition to submit to (comma separated)
+#SBATCH -J cpg.call
+#SBATCH -c 16
+#SBATCH -N 1 # Ensure that all cores are on one machine
+#SBATCH --mem=100gb
+#SBATCH --open-mode=append
+#SBATCH -t 3-00:00:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+
+export PATH="/n/home12/upendrabhattarai/bin/miniconda3/envs/cpg/bin:$PATH"
+#export PATH="/n/home12/upendrabhattarai/bin/pb-CpG-tools:$PATH"
+
+python /n/home12/upendrabhattarai/bin/pb-CpG-tools/aligned_bam_to_cpg_scores.py \
+-b merged.sorted.bam \
+-f ../../adapter.removed/hifiasm.v1/TdomV1.asm.bp.hap1.p_ctg.fasta \
+-o 1_A01 -t 16 -d /n/home12/upendrabhattarai/bin/pb-CpG-tools/pileup_calling_model/
 ```
 
