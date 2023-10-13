@@ -1,5 +1,5 @@
 Assembly process for firebrat's genome.
-This is just the collection of my all the scritpts I have used in various times to process the assembly. This is not a pipeline.
+This is just the collection of my all the scritpts I have used in various steps to process the assembly. This is not a pipeline.
 
 Received the data from Pacbio hifi as bam files.
 To convert these bamfiles into fastq, one can use samtools
