@@ -245,3 +245,8 @@ python /n/home12/upendrabhattarai/bin/pb-CpG-tools/aligned_bam_to_cpg_scores.py 
 -o 1_A01 -t 16 -d /n/home12/upendrabhattarai/bin/pb-CpG-tools/pileup_calling_model/
 ```
 
+
+### split each chromosome scaffolds in to contigs (break it at "N")
+```
+cat ../TdomH1Scaff_18.fa | perl -ne 'if(/^\>/){$scafnum++;}else{my $len=length($_);my @scaftigs=split(/N+/i,$_);my $scaftignum=0;foreach my $scaftig(@scaftigs){ my $len=length($scaftig);$scaftignum++;  print ">TdomH1Scaff_18:";print ""; print "$scaftignum-$len\n$scaftig\n";}}' > contig_chr_18.fa
+```
