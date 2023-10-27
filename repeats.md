@@ -6,3 +6,7 @@ activate conda environment and install
 conda install -c bioconda blast-legacy
 ```
 
+To download GyDB collection for ltrharvest
+```
+wget https://gydb.org/extensions/Collection/collection/db/GyDB_collection.zip
+```
