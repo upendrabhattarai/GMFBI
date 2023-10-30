@@ -10,3 +10,11 @@ To download GyDB collection for ltrharvest
 ```
 wget https://gydb.org/extensions/Collection/collection/db/GyDB_collection.zip
 ```
+
+I updated the Dfam.h5 library that comes with Repeatmasker with the version from 10-Jan-20223 20:07 This is version `Dfam_3.7`
+Its a big file 83.5 Gb so takes time to download
+download link `https://www.dfam.org/releases/Dfam_3.7/families/`
+
+```
+wget https://www.dfam.org/releases/Dfam_3.7/families/Dfam.h5.gz
+```
