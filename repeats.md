@@ -30,3 +30,20 @@ Then run the following code to merge the database:
 ```
 Now you can specify this Libraries/ directory by setting the LIBDIR environment variable,
 
+Ok to extract insect repeats from Repbase. 
+I copied the Repeatmasker library in my working directory.
+I then downloaded the repeatmasker version of the Repbase data. and untar that in the same working directory. It will append the repbase files to the Libraries folder that was already there.
+Then integrate those with the following command
+```
+/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/software/tetools_latest.sif addRepBase.pl -libdir Libraries/
+```
+
+I was trying to use famdb.py script from the latest Repeatmasker edition but couldn't manage to extract the insect repeats, so I downloaded the older version of the REpeatmasker `RepeatMasker-4.1.0.tar.gz` From the Archive. This version has a script `queryRepeatDatabse.pl`
+Which I used as:
+```
+path/to/downloadedRepeatmasker/utils/queryRepeatDatabase.pl -clade insecta --libdir ./path/to/Libraries/above > MakeRepeatBaseInsecta.fa
+tail -n+2 MakeRepeatBaseInsecta.fa > RepeatMaskerInsecta.lib
+```
+
+
+
