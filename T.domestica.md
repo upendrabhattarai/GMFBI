@@ -1,5 +1,5 @@
 Assembly process for firebrat's genome.
-This is just the collection of my all the scritpts I have used in various times to process the assembly. This is not a pipeline.
+This is just the collection of all the scripts I have used various times to process the assembly. This is not a pipeline.
 
 Received the data from Pacbio hifi as bam files.
 To convert these bamfiles into fastq, one can use samtools
@@ -253,3 +253,34 @@ grep -w -A 1 ">TdomScaff_2" TdomHap2.FINAL.length.sorted.renamed.oneliner.fa > i
 ```
 cat ../TdomH1Scaff_18.fa | perl -ne 'if(/^\>/){$scafnum++;}else{my $len=length($_);my @scaftigs=split(/N+/i,$_);my $scaftignum=0;foreach my $scaftig(@scaftigs){ my $len=length($scaftig);$scaftignum++;  print ">TdomH1Scaff_18:";print ""; print "$scaftignum-$len\n$scaftig\n";}}' > contig_chr_18.fa
 ```
+
+Script to run purgehaplotigs
+```
+#!/bin/bash
+
+#SBATCH -J purge.3
+#SBATCH -p test #serial_requeue #test #shared #serial_requeue # Partition to submit to (comma separated)
+#SBATCH -N 1
+#SBATCH -c 20
+#SBATCH --mem 15gb
+#SBATCH --open-mode=append
+#SBATCH -t 00-01:00
+#SBATCH -e %x_%j.err
+#SBATCH -o %x_%j.out
+
+#for softwares installed with conda
+export PATH=/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/software/mambaforge/envs/purge_haplotigs/bin:$PATH
+
+GENOME=Eann.GCA_023213315.1.filtered.fa
+READS=../sRA/SRR178575*
+
+#minimap2 -t 20 -ax map-ont $GENOME $READS --secondary=no \
+#       | samtools sort -@ 20 -o aligned.bam -T tmp.ali
+
+#purge_haplotigs hist -b aligned.bam -g $GENOME -t 20
+
+#purge_haplotigs cov -i aligned.bam.gencov -l 1 -m 25 -h 65 -o coverage_stats.csv -j 80 -s 80
+
+purge_haplotigs purge -g $GENOME -c coverage_stats.csv -t 20
+```
+
