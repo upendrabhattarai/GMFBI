@@ -1,0 +1,552 @@
+Last login: Mon Mar 11 09:27:34 on ttys000
+(base) upendrarajbhattarai@dhcp-140-247-109-173 ~ % cd /Volumes/Data_B/scratch_backup_T.dom/1.raw.data/Hi-C+mRNA-seq/230602_A00794_0860_AH7JV7DSX7_SUB14381_update2/fastq
+(base) upendrarajbhattarai@dhcp-140-247-109-173 fastq % ls
+PREP0367_UBhat16381A_A01v1_T_d_Emb_0_S1_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_A01v1_T_d_Emb_0_S1_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_A02v1_T_d_M_Go_1_S9_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_A02v1_T_d_M_Go_1_S9_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_A03v1_T_d_F_Nc_2_S17_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_A03v1_T_d_F_Nc_2_S17_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B01v1_T_d_Nym_0_S2_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_B01v1_T_d_Nym_0_S2_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B02v1_T_d_M_Go_2_S10_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_B02v1_T_d_M_Go_2_S10_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B03v1_T_d_F_Nc_3_S18_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_B03v1_T_d_F_Nc_3_S18_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C01v1_T_d_M_Ant_1_S3_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_C01v1_T_d_M_Ant_1_S3_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C02v1_T_d_M_Go_3_S11_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_C02v1_T_d_M_Go_3_S11_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C03v1_T_d_F_Go_1_S19_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_C03v1_T_d_F_Go_1_S19_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D01v1_T_d_M_Ant_2_S4_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_D01v1_T_d_M_Ant_2_S4_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D02v1_T_d_M_Wb_0_S12_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_D02v1_T_d_M_Wb_0_S12_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D03v1_T_d_F_Go_2_S20_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_D03v1_T_d_F_Go_2_S20_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_E01v1_T_d_M_Ant_3_S5_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_E01v1_T_d_M_Ant_3_S5_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_E02v1_T_d_F_Ant_1_S13_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_E02v1_T_d_F_Ant_1_S13_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_E03v1_T_d_F_Go_3_S21_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_E03v1_T_d_F_Go_3_S21_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_F01v1_T_d_M_Nc_1_S6_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_F01v1_T_d_M_Nc_1_S6_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_F02v1_T_d_F_Ant_2_S14_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_F02v1_T_d_F_Ant_2_S14_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_F03v1_T_d_F_Wb_0_S22_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_F03v1_T_d_F_Wb_0_S22_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_G01v1_T_d_M_Nc_2_S7_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_G01v1_T_d_M_Nc_2_S7_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_G02v1_T_d_F_Ant_3_S15_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_G02v1_T_d_F_Ant_3_S15_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_H01v1_T_d_M_Nc_3_S8_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_H01v1_T_d_M_Nc_3_S8_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_H02v1_T_d_F_Nc_1_S16_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_H02v1_T_d_F_Nc_1_S16_L004_R2_001.fastq.gz
+Reports
+SUB14149_A1_TdomHiC_S23_L004_R1_001.fastq.gz
+SUB14149_A1_TdomHiC_S23_L004_R2_001.fastq.gz
+SUB14149_B1_EaurHiC_S24_L004_R1_001.fastq.gz
+SUB14149_B1_EaurHiC_S24_L004_R2_001.fastq.gz
+Stats
+Undetermined_S0_L004_R1_001.fastq.gz
+Undetermined_S0_L004_R2_001.fastq.gz
+(base) upendrarajbhattarai@dhcp-140-247-109-173 fastq % ls *_R1_
+zsh: no matches found: *_R1_
+(base) upendrarajbhattarai@dhcp-140-247-109-173 fastq % ls *_R1_*
+PREP0367_UBhat16381A_A01v1_T_d_Emb_0_S1_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_A02v1_T_d_M_Go_1_S9_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_A03v1_T_d_F_Nc_2_S17_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_B01v1_T_d_Nym_0_S2_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_B02v1_T_d_M_Go_2_S10_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_B03v1_T_d_F_Nc_3_S18_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_C01v1_T_d_M_Ant_1_S3_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_C02v1_T_d_M_Go_3_S11_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_C03v1_T_d_F_Go_1_S19_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_D01v1_T_d_M_Ant_2_S4_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_D02v1_T_d_M_Wb_0_S12_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_D03v1_T_d_F_Go_2_S20_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_E01v1_T_d_M_Ant_3_S5_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_E02v1_T_d_F_Ant_1_S13_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_E03v1_T_d_F_Go_3_S21_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_F01v1_T_d_M_Nc_1_S6_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_F02v1_T_d_F_Ant_2_S14_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_F03v1_T_d_F_Wb_0_S22_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_G01v1_T_d_M_Nc_2_S7_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_G02v1_T_d_F_Ant_3_S15_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_H01v1_T_d_M_Nc_3_S8_L004_R1_001.fastq.gz
+PREP0367_UBhat16381A_H02v1_T_d_F_Nc_1_S16_L004_R1_001.fastq.gz
+SUB14149_A1_TdomHiC_S23_L004_R1_001.fastq.gz
+SUB14149_B1_EaurHiC_S24_L004_R1_001.fastq.gz
+Undetermined_S0_L004_R1_001.fastq.gz
+(base) upendrarajbhattarai@dhcp-140-247-109-173 fastq % ls *_R2_*
+PREP0367_UBhat16381A_A01v1_T_d_Emb_0_S1_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_E02v1_T_d_F_Ant_1_S13_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_A02v1_T_d_M_Go_1_S9_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_E03v1_T_d_F_Go_3_S21_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_A03v1_T_d_F_Nc_2_S17_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_F01v1_T_d_M_Nc_1_S6_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B01v1_T_d_Nym_0_S2_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_F02v1_T_d_F_Ant_2_S14_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B02v1_T_d_M_Go_2_S10_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_F03v1_T_d_F_Wb_0_S22_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B03v1_T_d_F_Nc_3_S18_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_G01v1_T_d_M_Nc_2_S7_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C01v1_T_d_M_Ant_1_S3_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_G02v1_T_d_F_Ant_3_S15_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C02v1_T_d_M_Go_3_S11_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_H01v1_T_d_M_Nc_3_S8_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C03v1_T_d_F_Go_1_S19_L004_R2_001.fastq.gz	PREP0367_UBhat16381A_H02v1_T_d_F_Nc_1_S16_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D01v1_T_d_M_Ant_2_S4_L004_R2_001.fastq.gz	SUB14149_A1_TdomHiC_S23_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D02v1_T_d_M_Wb_0_S12_L004_R2_001.fastq.gz	SUB14149_B1_EaurHiC_S24_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D03v1_T_d_F_Go_2_S20_L004_R2_001.fastq.gz	Undetermined_S0_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_E01v1_T_d_M_Ant_3_S5_L004_R2_001.fastq.gz
+(base) upendrarajbhattarai@dhcp-140-247-109-173 fastq % ls *_R2_*
+PREP0367_UBhat16381A_A01v1_T_d_Emb_0_S1_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_A02v1_T_d_M_Go_1_S9_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_A03v1_T_d_F_Nc_2_S17_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B01v1_T_d_Nym_0_S2_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B02v1_T_d_M_Go_2_S10_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_B03v1_T_d_F_Nc_3_S18_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C01v1_T_d_M_Ant_1_S3_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C02v1_T_d_M_Go_3_S11_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_C03v1_T_d_F_Go_1_S19_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D01v1_T_d_M_Ant_2_S4_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D02v1_T_d_M_Wb_0_S12_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_D03v1_T_d_F_Go_2_S20_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_E01v1_T_d_M_Ant_3_S5_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_E02v1_T_d_F_Ant_1_S13_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_E03v1_T_d_F_Go_3_S21_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_F01v1_T_d_M_Nc_1_S6_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_F02v1_T_d_F_Ant_2_S14_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_F03v1_T_d_F_Wb_0_S22_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_G01v1_T_d_M_Nc_2_S7_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_G02v1_T_d_F_Ant_3_S15_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_H01v1_T_d_M_Nc_3_S8_L004_R2_001.fastq.gz
+PREP0367_UBhat16381A_H02v1_T_d_F_Nc_1_S16_L004_R2_001.fastq.gz
+SUB14149_A1_TdomHiC_S23_L004_R2_001.fastq.gz
+SUB14149_B1_EaurHiC_S24_L004_R2_001.fastq.gz
+Undetermined_S0_L004_R2_001.fastq.gz
+(base) upendrarajbhattarai@dhcp-140-247-109-173 fastq % 
+  [Restored Mar 12, 2024 at 1:20:36 PM]
+## cd /Volumes/Data_B/scratch_backup_T.dom/1.raw.data/Hi-C+mRNA-seq/230602_A00794_0860_AH7JV7DSX7_SUB14381_update2/fastq ##
+Last login: Tue Mar 12 13:20:31 on console
+(base) upendrarajbhattarai@dhcp-140-247-109-173 ~ % ssh upendrabhattarai@login.rc.fas.harvard.edu
+(upendrabhattarai@login.rc.fas.harvard.edu) Password: 
+(upendrabhattarai@login.rc.fas.harvard.edu) VerificationCode: 
+Last login: Mon Mar  4 09:39:50 2024 from 140.247.109.173
+!!!!!!!!!!!!!!!!!!!!!! Cannon Cluster !!!!!!!!!!!!!!!!!!!!!!!!!!
+Welcome to Cannon, a HPC resource for the research community,
+hosted by Research Computing at HU's Faculty of Arts and Sciences.
+
++------------------- Helpful Documentation: --------------------+
+| https://docs.rc.fas.harvard.edu/kb/quickstart-guide/          |
+| https://docs.rc.fas.harvard.edu/kb/running-jobs/              |
+| https://docs.rc.fas.harvard.edu/kb/convenient-slurm-commands/ |
++---------------------------------------------------------------+
+
++------------------- NEWS & UPDATES: ----------------------------------------------------+
++ OFFICE HOURS: Wednesdays noon-3pm, see website for details                             +
++                                                                                        +
++ Check our training schedule at: https://www.rc.fas.harvard.edu/upcoming-training/      +
++----------------------------------------------------------------------------------------+
+
+NEXT MAINTENANCE: APRIL 1ST 7-11AM
+
+https://fasrc.instatus.com/
+
+OFFICE HOURS: Are held on Zoom from 12-3PM EST on Wednesdays.
+See https://www.rc.fas.harvard.edu/training/office-hours/ for details.
+[upendrabhattarai@boslogin02 ~]$ cd /n/holyscratch01/extavour_lab/Everyone/upendrabhattarai/
+[upendrabhattarai@boslogin02 upendrabhattarai]$ ls
+1.raw.data/		 bin/			   euborellia.hic.initgration/		  sra_thermobia/
+2.T.dom.RNA_seq/	 B.T.dom.repeat.lib/	   foficula_phylogeny/			  Tdom.old/
+3.Tdom.H1.annota/	 busco.plot/		   Forficula.auricularia_OU_Faur_GAV1.1/  test/
+anisolabis.maritima.v1/  cellulase.t.dom/	   Forficula.auricularia.v1/		  wing.t.dom/
+A.T.dom.assembly/	 Euborellia.annulipes.v1/  Processed_assemblies/
+[upendrabhattarai@boslogin02 upendrabhattarai]$ cd A.T.dom.assembly/
+[upendrabhattarai@boslogin02 A.T.dom.assembly]$ ls
+10.mitogenome/		  2.hifiadapterfilt/				     6.hi-c.mapping/  misc/
+1.1.hi-c.qc/		  3.kraken/					     7.yahs/
+1.raw_reads_pacbio_Tdom/  5.1.meta.hifiasm.with.bacterialreads.from.kraken/  8.dotplot/
+2.1.hi-c.trimmomatic/	  5.hifiasm/					     9.circos/
+[upendrabhattarai@boslogin02 A.T.dom.assembly]$ cd 1
+-bash: cd: 1: No such file or directory
+[upendrabhattarai@boslogin02 A.T.dom.assembly]$ cd 1.1.hi-c.qc/
+[upendrabhattarai@boslogin02 1.1.hi-c.qc]$ ls
+[upendrabhattarai@boslogin02 1.1.hi-c.qc]$ cd ..
+[upendrabhattarai@boslogin02 A.T.dom.assembly]$ ls
+10.mitogenome/		  2.hifiadapterfilt/				     6.hi-c.mapping/  misc/
+1.1.hi-c.qc/		  3.kraken/					     7.yahs/
+1.raw_reads_pacbio_Tdom/  5.1.meta.hifiasm.with.bacterialreads.from.kraken/  8.dotplot/
+2.1.hi-c.trimmomatic/	  5.hifiasm/					     9.circos/
+[upendrabhattarai@boslogin02 A.T.dom.assembly]$ ls 1.raw_reads_pacbio_Tdom/
+1_A01/	2_B01/	3_C01/	4_D01/
+[upendrabhattarai@boslogin02 A.T.dom.assembly]$ ls 1.raw_reads_pacbio_Tdom/1_A01/
+m64408e_230104_191438.hifi_reads.bam  m64408e_230104_191438.transferdone
+[upendrabhattarai@boslogin02 A.T.dom.assembly]$ ls
+10.mitogenome/		  2.hifiadapterfilt/				     6.hi-c.mapping/  misc/
+1.1.hi-c.qc/		  3.kraken/					     7.yahs/
+1.raw_reads_pacbio_Tdom/  5.1.meta.hifiasm.with.bacterialreads.from.kraken/  8.dotplot/
+2.1.hi-c.trimmomatic/	  5.hifiasm/					     9.circos/
+[upendrabhattarai@boslogin02 A.T.dom.assembly]$ cd 2.hifiadapterfilt/
+[upendrabhattarai@boslogin02 2.hifiadapterfilt]$ ls
+m64408e_230104_191438.hifi_reads.bam@  m64408e_230107_170457.hifi_reads.bam@  QC/
+m64408e_230106_060914.hifi_reads.bam@  m64408e_230109_021420.hifi_reads.bam@
+[upendrabhattarai@boslogin02 2.hifiadapterfilt]$ cd QC/
+[upendrabhattarai@boslogin02 QC]$ ls
+[upendrabhattarai@boslogin02 QC]$ ls
+[upendrabhattarai@boslogin02 QC]$ cd ..
+[upendrabhattarai@boslogin02 2.hifiadapterfilt]$ ls
+m64408e_230104_191438.hifi_reads.bam@  m64408e_230107_170457.hifi_reads.bam@  QC/
+m64408e_230106_060914.hifi_reads.bam@  m64408e_230109_021420.hifi_reads.bam@
+[upendrabhattarai@boslogin02 2.hifiadapterfilt]$ cd /n/holylabs/LABS/extavour_lab/Everyone/
+[upendrabhattarai@boslogin02 Everyone]$ ls
+bin/  firebrat_genome/
+[upendrabhattarai@boslogin02 Everyone]$ cd firebrat_genome/
+[upendrabhattarai@boslogin02 firebrat_genome]$ ls
+blast_with_genome/  blast_with_proteins/  genome_assembly_annotation/
+[upendrabhattarai@boslogin02 firebrat_genome]$ cd ..
+[upendrabhattarai@boslogin02 Everyone]$ ls
+bin/  firebrat_genome/
+[upendrabhattarai@boslogin02 Everyone]$ cd bin/
+[upendrabhattarai@boslogin02 bin]$ ls
+blast_2.15.0.sif*
+[upendrabhattarai@boslogin02 bin]$ cd ..
+[upendrabhattarai@boslogin02 Everyone]$ ls
+bin/  firebrat_genome/
+[upendrabhattarai@boslogin02 Everyone]$ cd ..
+[upendrabhattarai@boslogin02 extavour_lab]$ ls
+Everyone/  Lab/  Users/
+[upendrabhattarai@boslogin02 extavour_lab]$ cd Users/
+[upendrabhattarai@boslogin02 Users]$ ls
+aacastro/	    brodrigues/     cwhittle/  itran/	  ojaiyesimi/  skambha6/
+aaguilarmaldonado/  bronwynmiller/  dmarkus/   kgotting/  ppelayo/     sphuangphong/
+alochab/	    bwilson/	    ejules/    lblondel/  rkapoor/     suhridsg/
+arpitakulkarni/     cextavour/	    gylla/     mkatuwal/  schwager/    tkumar/
+arulpolpass/	    chandrashekar/  harsha/    mkish/	  sgandhi/     upendrabhattarai/
+awatts/		    cmoffatt/	    ironai/    mmelaku/   shchurch/    vschmidt/
+[upendrabhattarai@boslogin02 Users]$ cd upendrabhattarai/
+[upendrabhattarai@boslogin02 upendrabhattarai]$ ls
+euborellia.backup/  scratch.backup/  software/
+[upendrabhattarai@boslogin02 upendrabhattarai]$ cd scratch.backup/
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  3.hifiadapterfiltered/  6.fastqc.filt/  8.hi-C.mapping/		 9.4.blobtools/  repeats/
+10.hi-c-qc/   4.hifi.genomescope/     6.hifiasm/      9.2.hifiasm.hiC.0.2.trim/  9.yahs/
+2.bam2fastq/  5.kraken/		      7.HiCQc/	      9.3.mitoextract/		 annotation/
+[upendrabhattarai@boslogin02 scratch.backup]$ cd 3.hifiadapterfiltered/
+[upendrabhattarai@boslogin02 3.hifiadapterfiltered]$ ls
+m64408e_230104_191438.hifi_reads.filt.fastq.gz	m64408e_230107_170457.hifi_reads.filt.fastq.gz
+m64408e_230106_060914.hifi_reads.filt.fastq.gz	m64408e_230109_021420.hifi_reads.filt.fastq.gz
+[upendrabhattarai@boslogin02 3.hifiadapterfiltered]$ ls
+m64408e_230104_191438.hifi_reads.filt.fastq.gz	m64408e_230107_170457.hifi_reads.filt.fastq.gz
+m64408e_230106_060914.hifi_reads.filt.fastq.gz	m64408e_230109_021420.hifi_reads.filt.fastq.gz
+[upendrabhattarai@boslogin02 3.hifiadapterfiltered]$ cd ..
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  3.hifiadapterfiltered/  6.fastqc.filt/  8.hi-C.mapping/		 9.4.blobtools/  repeats/
+10.hi-c-qc/   4.hifi.genomescope/     6.hifiasm/      9.2.hifiasm.hiC.0.2.trim/  9.yahs/
+2.bam2fastq/  5.kraken/		      7.HiCQc/	      9.3.mitoextract/		 annotation/
+[upendrabhattarai@boslogin02 scratch.backup]$ cd 4.hifi.genomescope/
+[upendrabhattarai@boslogin02 4.hifi.genomescope]$ ls
+kmc.sh	     reads.kmc_pre  reads_L10_U950.dump     reads_L10_U950.kmc_suf  reads_L950.kmc_suf
+reads.histo  reads.kmc_suf  reads_L10_U950.kmc_pre  reads_L950.kmc_pre
+[upendrabhattarai@boslogin02 4.hifi.genomescope]$ cd ..
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  3.hifiadapterfiltered/  6.fastqc.filt/  8.hi-C.mapping/		 9.4.blobtools/  repeats/
+10.hi-c-qc/   4.hifi.genomescope/     6.hifiasm/      9.2.hifiasm.hiC.0.2.trim/  9.yahs/
+2.bam2fastq/  5.kraken/		      7.HiCQc/	      9.3.mitoextract/		 annotation/
+[upendrabhattarai@boslogin02 scratch.backup]$ ls ~/bin/HiFiAdapterFilt/
+DB/		     hifiadapterfilt.ris  LICENSE	     README.md		 zenodo.5751365.png
+hifiadapterfilt.bib  hifiadapterfilt.sh*  pbadapterfilt.sh*  zenodo.4716418.png
+[upendrabhattarai@boslogin02 scratch.backup]$ ~/bin/HiFiAdapterFilt/pbadapterfilt.sh -v
+2.0.1
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  3.hifiadapterfiltered/  6.fastqc.filt/  8.hi-C.mapping/		 9.4.blobtools/  repeats/
+10.hi-c-qc/   4.hifi.genomescope/     6.hifiasm/      9.2.hifiasm.hiC.0.2.trim/  9.yahs/
+2.bam2fastq/  5.kraken/		      7.HiCQc/	      9.3.mitoextract/		 annotation/
+[upendrabhattarai@boslogin02 scratch.backup]$ cd 3.hifiadapterfiltered/
+[upendrabhattarai@boslogin02 3.hifiadapterfiltered]$ ls
+m64408e_230104_191438.hifi_reads.filt.fastq.gz	m64408e_230107_170457.hifi_reads.filt.fastq.gz
+m64408e_230106_060914.hifi_reads.filt.fastq.gz	m64408e_230109_021420.hifi_reads.filt.fastq.gz
+[upendrabhattarai@boslogin02 3.hifiadapterfiltered]$ pwd
+/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/scratch.backup/3.hifiadapterfiltered
+[upendrabhattarai@boslogin02 3.hifiadapterfiltered]$ ls
+m64408e_230104_191438.hifi_reads.filt.fastq.gz	m64408e_230107_170457.hifi_reads.filt.fastq.gz
+m64408e_230106_060914.hifi_reads.filt.fastq.gz	m64408e_230109_021420.hifi_reads.filt.fastq.gz
+[upendrabhattarai@boslogin02 3.hifiadapterfiltered]$ cd ..
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  3.hifiadapterfiltered/  6.fastqc.filt/  8.hi-C.mapping/		 9.4.blobtools/  repeats/
+10.hi-c-qc/   4.hifi.genomescope/     6.hifiasm/      9.2.hifiasm.hiC.0.2.trim/  9.yahs/
+2.bam2fastq/  5.kraken/		      7.HiCQc/	      9.3.mitoextract/		 annotation/
+[upendrabhattarai@boslogin02 scratch.backup]$ pwd
+/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/scratch.backup
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  3.hifiadapterfiltered/  6.fastqc.filt/  8.hi-C.mapping/		 9.4.blobtools/  repeats/
+10.hi-c-qc/   4.hifi.genomescope/     6.hifiasm/      9.2.hifiasm.hiC.0.2.trim/  9.yahs/
+2.bam2fastq/  5.kraken/		      7.HiCQc/	      9.3.mitoextract/		 annotation/
+[upendrabhattarai@boslogin02 scratch.backup]$ cd 4.hifi.genomescope/
+[upendrabhattarai@boslogin02 4.hifi.genomescope]$ ls
+kmc.sh	     reads.kmc_pre  reads_L10_U950.dump     reads_L10_U950.kmc_suf  reads_L950.kmc_suf
+reads.histo  reads.kmc_suf  reads_L10_U950.kmc_pre  reads_L950.kmc_pre
+[upendrabhattarai@boslogin02 4.hifi.genomescope]$ less kmc.sh 
+[upendrabhattarai@boslogin02 4.hifi.genomescope]$ cd ..
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  3.hifiadapterfiltered/  6.fastqc.filt/  8.hi-C.mapping/		 9.4.blobtools/  repeats/
+10.hi-c-qc/   4.hifi.genomescope/     6.hifiasm/      9.2.hifiasm.hiC.0.2.trim/  9.yahs/
+2.bam2fastq/  5.kraken/		      7.HiCQc/	      9.3.mitoextract/		 annotation/
+[upendrabhattarai@boslogin02 scratch.backup]$ cd 5.kraken/
+[upendrabhattarai@boslogin02 5.kraken]$ ls
+classified.out		  kraken2_61553288.err
+extract_10385507.err	  kraken2_61553288.out
+extract_10385507.out	  kraken2krona.report
+extract_10386427.err	  kraken2.sh
+extract_10386427.out	  kraken.filter.report
+extract_10386660.err	  kreport2krona.py*
+extract_10386660.out	  m64408e_230104_191438.hifi_onlybac.fasta
+extract_10386982.err	  m64408e_230104_191438.hifi_reads.filt.fasta@
+extract_10386982.out	  m64408e_230104_191438.hifi_reads.filt.kraken.nobac.fasta
+extract_10387328.err	  m64408e_230106_060914.hifi_onlybac.fasta
+extract_10387328.out	  m64408e_230106_060914.hifi_reads.filt.fasta@
+extract_10435449.err	  m64408e_230106_060914.hifi_reads.filt.kraken.nobac.fasta
+extract_10435449.out	  m64408e_230107_170457.hifi_onlybac.fasta
+extract_10437366.err	  m64408e_230107_170457.hifi_reads.filt.fasta@
+extract_10437366.out	  m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta
+extract_10438071.err	  m64408e_230109_021420.hifi_onlybac.fasta
+extract_10438071.out	  m64408e_230109_021420.hifi_reads.filt.fasta@
+extract_10438234.err	  m64408e_230109_021420.hifi_reads.filt.kraken.nobac.fasta
+extract_10438234.out	  only.bac.report
+extract_10438501.err	  reports.txt
+extract_10438501.out	  unclassified.out
+extract_kraken_reads.py*
+[upendrabhattarai@boslogin02 5.kraken]$ less kraken2.sh 
+[upendrabhattarai@boslogin02 5.kraken]$ ls
+classified.out	      extract_10435449.err	kraken2_61553288.err					  m64408e_230106_060914.hifi_reads.filt.kraken.nobac.fasta
+extract_10385507.err  extract_10435449.out	kraken2_61553288.out					  m64408e_230107_170457.hifi_onlybac.fasta
+extract_10385507.out  extract_10437366.err	kraken2krona.report					  m64408e_230107_170457.hifi_reads.filt.fasta@
+extract_10386427.err  extract_10437366.out	kraken2.sh						  m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta
+extract_10386427.out  extract_10438071.err	kraken.filter.report					  m64408e_230109_021420.hifi_onlybac.fasta
+extract_10386660.err  extract_10438071.out	kreport2krona.py*					  m64408e_230109_021420.hifi_reads.filt.fasta@
+extract_10386660.out  extract_10438234.err	m64408e_230104_191438.hifi_onlybac.fasta		  m64408e_230109_021420.hifi_reads.filt.kraken.nobac.fasta
+extract_10386982.err  extract_10438234.out	m64408e_230104_191438.hifi_reads.filt.fasta@		  only.bac.report
+extract_10386982.out  extract_10438501.err	m64408e_230104_191438.hifi_reads.filt.kraken.nobac.fasta  reports.txt
+extract_10387328.err  extract_10438501.out	m64408e_230106_060914.hifi_onlybac.fasta		  unclassified.out
+extract_10387328.out  extract_kraken_reads.py*	m64408e_230106_060914.hifi_reads.filt.fasta@
+[upendrabhattarai@boslogin02 5.kraken]$ less reports.txt 
+[upendrabhattarai@boslogin02 5.kraken]$ less only.bac.report 
+[upendrabhattarai@boslogin02 5.kraken]$ less reports.txt 
+[upendrabhattarai@boslogin02 5.kraken]$ wc -l reports.txt 
+15624 reports.txt
+[upendrabhattarai@boslogin02 5.kraken]$ ls
+classified.out	      extract_10435449.err	kraken2_61553288.err					  m64408e_230106_060914.hifi_reads.filt.kraken.nobac.fasta
+extract_10385507.err  extract_10435449.out	kraken2_61553288.out					  m64408e_230107_170457.hifi_onlybac.fasta
+extract_10385507.out  extract_10437366.err	kraken2krona.report					  m64408e_230107_170457.hifi_reads.filt.fasta@
+extract_10386427.err  extract_10437366.out	kraken2.sh						  m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta
+extract_10386427.out  extract_10438071.err	kraken.filter.report					  m64408e_230109_021420.hifi_onlybac.fasta
+extract_10386660.err  extract_10438071.out	kreport2krona.py*					  m64408e_230109_021420.hifi_reads.filt.fasta@
+extract_10386660.out  extract_10438234.err	m64408e_230104_191438.hifi_onlybac.fasta		  m64408e_230109_021420.hifi_reads.filt.kraken.nobac.fasta
+extract_10386982.err  extract_10438234.out	m64408e_230104_191438.hifi_reads.filt.fasta@		  only.bac.report
+extract_10386982.out  extract_10438501.err	m64408e_230104_191438.hifi_reads.filt.kraken.nobac.fasta  reports.txt
+extract_10387328.err  extract_10438501.out	m64408e_230106_060914.hifi_onlybac.fasta		  unclassified.out
+extract_10387328.out  extract_kraken_reads.py*	m64408e_230106_060914.hifi_reads.filt.fasta@
+[upendrabhattarai@boslogin02 5.kraken]$ pwd
+/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/scratch.backup/5.kraken
+[upendrabhattarai@boslogin02 5.kraken]$ less classified.out 
+[upendrabhattarai@boslogin02 5.kraken]$ less kraken2krona.report 
+[upendrabhattarai@boslogin02 5.kraken]$ ls
+classified.out	      extract_10435449.err	kraken2_61553288.err					  m64408e_230106_060914.hifi_reads.filt.kraken.nobac.fasta
+extract_10385507.err  extract_10435449.out	kraken2_61553288.out					  m64408e_230107_170457.hifi_onlybac.fasta
+extract_10385507.out  extract_10437366.err	kraken2krona.report					  m64408e_230107_170457.hifi_reads.filt.fasta@
+extract_10386427.err  extract_10437366.out	kraken2.sh						  m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta
+extract_10386427.out  extract_10438071.err	kraken.filter.report					  m64408e_230109_021420.hifi_onlybac.fasta
+extract_10386660.err  extract_10438071.out	kreport2krona.py*					  m64408e_230109_021420.hifi_reads.filt.fasta@
+extract_10386660.out  extract_10438234.err	m64408e_230104_191438.hifi_onlybac.fasta		  m64408e_230109_021420.hifi_reads.filt.kraken.nobac.fasta
+extract_10386982.err  extract_10438234.out	m64408e_230104_191438.hifi_reads.filt.fasta@		  only.bac.report
+extract_10386982.out  extract_10438501.err	m64408e_230104_191438.hifi_reads.filt.kraken.nobac.fasta  reports.txt
+extract_10387328.err  extract_10438501.out	m64408e_230106_060914.hifi_onlybac.fasta		  unclassified.out
+extract_10387328.out  extract_kraken_reads.py*	m64408e_230106_060914.hifi_reads.filt.fasta@
+[upendrabhattarai@boslogin02 5.kraken]$ less unclassified.out 
+[upendrabhattarai@boslogin02 5.kraken]$ ls
+classified.out	      extract_10435449.err	kraken2_61553288.err					  m64408e_230106_060914.hifi_reads.filt.kraken.nobac.fasta
+extract_10385507.err  extract_10435449.out	kraken2_61553288.out					  m64408e_230107_170457.hifi_onlybac.fasta
+extract_10385507.out  extract_10437366.err	kraken2krona.report					  m64408e_230107_170457.hifi_reads.filt.fasta@
+extract_10386427.err  extract_10437366.out	kraken2.sh						  m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta
+extract_10386427.out  extract_10438071.err	kraken.filter.report					  m64408e_230109_021420.hifi_onlybac.fasta
+extract_10386660.err  extract_10438071.out	kreport2krona.py*					  m64408e_230109_021420.hifi_reads.filt.fasta@
+extract_10386660.out  extract_10438234.err	m64408e_230104_191438.hifi_onlybac.fasta		  m64408e_230109_021420.hifi_reads.filt.kraken.nobac.fasta
+extract_10386982.err  extract_10438234.out	m64408e_230104_191438.hifi_reads.filt.fasta@		  only.bac.report
+extract_10386982.out  extract_10438501.err	m64408e_230104_191438.hifi_reads.filt.kraken.nobac.fasta  reports.txt
+extract_10387328.err  extract_10438501.out	m64408e_230106_060914.hifi_onlybac.fasta		  unclassified.out
+extract_10387328.out  extract_kraken_reads.py*	m64408e_230106_060914.hifi_reads.filt.fasta@
+[upendrabhattarai@boslogin02 5.kraken]$ pwd
+/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/scratch.backup/5.kraken
+[upendrabhattarai@boslogin02 5.kraken]$ ls
+classified.out	      extract_10435449.err	kraken2_61553288.err					  m64408e_230106_060914.hifi_reads.filt.kraken.nobac.fasta
+extract_10385507.err  extract_10435449.out	kraken2_61553288.out					  m64408e_230107_170457.hifi_onlybac.fasta
+extract_10385507.out  extract_10437366.err	kraken2krona.report					  m64408e_230107_170457.hifi_reads.filt.fasta@
+extract_10386427.err  extract_10437366.out	kraken2.sh						  m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta
+extract_10386427.out  extract_10438071.err	kraken.filter.report					  m64408e_230109_021420.hifi_onlybac.fasta
+extract_10386660.err  extract_10438071.out	kreport2krona.py*					  m64408e_230109_021420.hifi_reads.filt.fasta@
+extract_10386660.out  extract_10438234.err	m64408e_230104_191438.hifi_onlybac.fasta		  m64408e_230109_021420.hifi_reads.filt.kraken.nobac.fasta
+extract_10386982.err  extract_10438234.out	m64408e_230104_191438.hifi_reads.filt.fasta@		  only.bac.report
+extract_10386982.out  extract_10438501.err	m64408e_230104_191438.hifi_reads.filt.kraken.nobac.fasta  reports.txt
+extract_10387328.err  extract_10438501.out	m64408e_230106_060914.hifi_onlybac.fasta		  unclassified.out
+extract_10387328.out  extract_kraken_reads.py*	m64408e_230106_060914.hifi_reads.filt.fasta@
+[upendrabhattarai@boslogin02 5.kraken]$ less extract_kraken_reads.py 
+[upendrabhattarai@boslogin02 5.kraken]$ ls
+classified.out	      extract_10435449.err	kraken2_61553288.err					  m64408e_230106_060914.hifi_reads.filt.kraken.nobac.fasta
+extract_10385507.err  extract_10435449.out	kraken2_61553288.out					  m64408e_230107_170457.hifi_onlybac.fasta
+extract_10385507.out  extract_10437366.err	kraken2krona.report					  m64408e_230107_170457.hifi_reads.filt.fasta@
+extract_10386427.err  extract_10437366.out	kraken2.sh						  m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta
+extract_10386427.out  extract_10438071.err	kraken.filter.report					  m64408e_230109_021420.hifi_onlybac.fasta
+extract_10386660.err  extract_10438071.out	kreport2krona.py*					  m64408e_230109_021420.hifi_reads.filt.fasta@
+extract_10386660.out  extract_10438234.err	m64408e_230104_191438.hifi_onlybac.fasta		  m64408e_230109_021420.hifi_reads.filt.kraken.nobac.fasta
+extract_10386982.err  extract_10438234.out	m64408e_230104_191438.hifi_reads.filt.fasta@		  only.bac.report
+extract_10386982.out  extract_10438501.err	m64408e_230104_191438.hifi_reads.filt.kraken.nobac.fasta  reports.txt
+extract_10387328.err  extract_10438501.out	m64408e_230106_060914.hifi_onlybac.fasta		  unclassified.out
+extract_10387328.out  extract_kraken_reads.py*	m64408e_230106_060914.hifi_reads.filt.fasta@
+[upendrabhattarai@boslogin02 5.kraken]$ less kraken2.sh 
+[upendrabhattarai@boslogin02 5.kraken]$ less kraken2_61553288.err 
+[upendrabhattarai@boslogin02 5.kraken]$ seff 61553288
+Job not found.
+[upendrabhattarai@boslogin02 5.kraken]$ less kraken2_61553288.out 
+[upendrabhattarai@boslogin02 5.kraken]$ less kraken2_61553288.err 
+[upendrabhattarai@boslogin02 5.kraken]$ less reports.txt 
+[upendrabhattarai@boslogin02 5.kraken]$ less unclassified.out 
+[upendrabhattarai@boslogin02 5.kraken]$ less classified.out 
+[upendrabhattarai@boslogin02 5.kraken]$ less kraken.filter.report 
+[upendrabhattarai@boslogin02 5.kraken]$ ls
+classified.out	      extract_10435449.err	kraken2_61553288.err					  m64408e_230106_060914.hifi_reads.filt.kraken.nobac.fasta
+extract_10385507.err  extract_10435449.out	kraken2_61553288.out					  m64408e_230107_170457.hifi_onlybac.fasta
+extract_10385507.out  extract_10437366.err	kraken2krona.report					  m64408e_230107_170457.hifi_reads.filt.fasta@
+extract_10386427.err  extract_10437366.out	kraken2.sh						  m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta
+extract_10386427.out  extract_10438071.err	kraken.filter.report					  m64408e_230109_021420.hifi_onlybac.fasta
+extract_10386660.err  extract_10438071.out	kreport2krona.py*					  m64408e_230109_021420.hifi_reads.filt.fasta@
+extract_10386660.out  extract_10438234.err	m64408e_230104_191438.hifi_onlybac.fasta		  m64408e_230109_021420.hifi_reads.filt.kraken.nobac.fasta
+extract_10386982.err  extract_10438234.out	m64408e_230104_191438.hifi_reads.filt.fasta@		  only.bac.report
+extract_10386982.out  extract_10438501.err	m64408e_230104_191438.hifi_reads.filt.kraken.nobac.fasta  reports.txt
+extract_10387328.err  extract_10438501.out	m64408e_230106_060914.hifi_onlybac.fasta		  unclassified.out
+extract_10387328.out  extract_kraken_reads.py*	m64408e_230106_060914.hifi_reads.filt.fasta@
+[upendrabhattarai@boslogin02 5.kraken]$ cd ..
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  2.bam2fastq/	      4.hifi.genomescope/  6.fastqc.filt/  7.HiCQc/	    9.2.hifiasm.hiC.0.2.trim/  9.4.blobtools/  annotation/
+10.hi-c-qc/   3.hifiadapterfiltered/  5.kraken/		   6.hifiasm/	   8.hi-C.mapping/  9.3.mitoextract/	       9.yahs/	       repeats/
+[upendrabhattarai@boslogin02 scratch.backup]$ pwd
+/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/scratch.backup
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  2.bam2fastq/	      4.hifi.genomescope/  6.fastqc.filt/  7.HiCQc/	    9.2.hifiasm.hiC.0.2.trim/  9.4.blobtools/  annotation/
+10.hi-c-qc/   3.hifiadapterfiltered/  5.kraken/		   6.hifiasm/	   8.hi-C.mapping/  9.3.mitoextract/	       9.yahs/	       repeats/
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  2.bam2fastq/	      4.hifi.genomescope/  6.fastqc.filt/  7.HiCQc/	    9.2.hifiasm.hiC.0.2.trim/  9.4.blobtools/  annotation/
+10.hi-c-qc/   3.hifiadapterfiltered/  5.kraken/		   6.hifiasm/	   8.hi-C.mapping/  9.3.mitoextract/	       9.yahs/	       repeats/
+[upendrabhattarai@boslogin02 scratch.backup]$ cd 6.fastqc.filt/
+[upendrabhattarai@boslogin02 6.fastqc.filt]$ ls
+multiqc_data/  multiqc_report.html
+[upendrabhattarai@boslogin02 6.fastqc.filt]$ less multiqc_report.html 
+[upendrabhattarai@boslogin02 6.fastqc.filt]$ ls
+multiqc_data/  multiqc_report.html
+[upendrabhattarai@boslogin02 6.fastqc.filt]$ ls multiqc_data/
+multiqc_data.json  multiqc_fastqc.txt  multiqc_general_stats.txt  multiqc.log  multiqc_sources.txt
+[upendrabhattarai@boslogin02 6.fastqc.filt]$ cd multiqc_data/
+[upendrabhattarai@boslogin02 multiqc_data]$ ls
+multiqc_data.json  multiqc_fastqc.txt  multiqc_general_stats.txt  multiqc.log  multiqc_sources.txt
+[upendrabhattarai@boslogin02 multiqc_data]$ less multiqc_general_stats.txt 
+[upendrabhattarai@boslogin02 multiqc_data]$ ls
+multiqc_data.json  multiqc_fastqc.txt  multiqc_general_stats.txt  multiqc.log  multiqc_sources.txt
+[upendrabhattarai@boslogin02 multiqc_data]$ cd ..
+[upendrabhattarai@boslogin02 6.fastqc.filt]$ ls
+multiqc_data/  multiqc_report.html
+[upendrabhattarai@boslogin02 6.fastqc.filt]$ cd ..
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  2.bam2fastq/	      4.hifi.genomescope/  6.fastqc.filt/  7.HiCQc/	    9.2.hifiasm.hiC.0.2.trim/  9.4.blobtools/  annotation/
+10.hi-c-qc/   3.hifiadapterfiltered/  5.kraken/		   6.hifiasm/	   8.hi-C.mapping/  9.3.mitoextract/	       9.yahs/	       repeats/
+[upendrabhattarai@boslogin02 scratch.backup]$ cd 6.hifiasm/
+[upendrabhattarai@boslogin02 6.hifiasm]$ ls
+hiasmkrak_10411984.err					      Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.p_ctg.fasta.stat  Tdom_HiFC_s0.2_asm.hic.p_ctg.lowQ.bed
+hiasmkrak_10411984.out					      Tdom_HiFC_s0.2_asm.hic.hap1.p_ctg.gfa		       Tdom_HiFC_s0.2_asm.hic.p_ctg.noseq.gfa
+hifiasm.sh						      Tdom_HiFC_s0.2_asm.hic.hap1.p_ctg.lowQ.bed	       Tdom_HiFC_s0.2_asm.hic.p_utg.gfa
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.hap1.p_ctg.fasta       Tdom_HiFC_s0.2_asm.hic.hap1.p_ctg.noseq.gfa	       Tdom_HiFC_s0.2_asm.hic.p_utg.lowQ.bed
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.hap1.p_ctg.fasta.stat  Tdom_HiFC_s0.2_asm.hic.hap2.p_ctg.gfa		       Tdom_HiFC_s0.2_asm.hic.p_utg.noseq.gfa
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.hap2.p_ctg.fasta       Tdom_HiFC_s0.2_asm.hic.hap2.p_ctg.lowQ.bed	       Tdom_HiFC_s0.2_asm.hic.r_utg.gfa
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.hap2.p_ctg.fasta.stat  Tdom_HiFC_s0.2_asm.hic.hap2.p_ctg.noseq.gfa	       Tdom_HiFC_s0.2_asm.hic.r_utg.lowQ.bed
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.p_ctg.fasta	      Tdom_HiFC_s0.2_asm.hic.p_ctg.gfa			       Tdom_HiFC_s0.2_asm.hic.r_utg.noseq.gfa
+[upendrabhattarai@boslogin02 6.hifiasm]$ less hifiasm.sh 
+[upendrabhattarai@boslogin02 6.hifiasm]$ ls
+hiasmkrak_10411984.err					      Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.p_ctg.fasta.stat  Tdom_HiFC_s0.2_asm.hic.p_ctg.lowQ.bed
+hiasmkrak_10411984.out					      Tdom_HiFC_s0.2_asm.hic.hap1.p_ctg.gfa		       Tdom_HiFC_s0.2_asm.hic.p_ctg.noseq.gfa
+hifiasm.sh						      Tdom_HiFC_s0.2_asm.hic.hap1.p_ctg.lowQ.bed	       Tdom_HiFC_s0.2_asm.hic.p_utg.gfa
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.hap1.p_ctg.fasta       Tdom_HiFC_s0.2_asm.hic.hap1.p_ctg.noseq.gfa	       Tdom_HiFC_s0.2_asm.hic.p_utg.lowQ.bed
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.hap1.p_ctg.fasta.stat  Tdom_HiFC_s0.2_asm.hic.hap2.p_ctg.gfa		       Tdom_HiFC_s0.2_asm.hic.p_utg.noseq.gfa
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.hap2.p_ctg.fasta       Tdom_HiFC_s0.2_asm.hic.hap2.p_ctg.lowQ.bed	       Tdom_HiFC_s0.2_asm.hic.r_utg.gfa
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.hap2.p_ctg.fasta.stat  Tdom_HiFC_s0.2_asm.hic.hap2.p_ctg.noseq.gfa	       Tdom_HiFC_s0.2_asm.hic.r_utg.lowQ.bed
+Tdom_HiFC_s0.1_nw4_np85k_fp0.1_asm.hic.p_ctg.fasta	      Tdom_HiFC_s0.2_asm.hic.p_ctg.gfa			       Tdom_HiFC_s0.2_asm.hic.r_utg.noseq.gfa
+[upendrabhattarai@boslogin02 6.hifiasm]$ pwd
+/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/scratch.backup/6.hifiasm
+[upendrabhattarai@boslogin02 6.hifiasm]$ cd ..
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  2.bam2fastq/	      4.hifi.genomescope/  6.fastqc.filt/  7.HiCQc/	    9.2.hifiasm.hiC.0.2.trim/  9.4.blobtools/  annotation/
+10.hi-c-qc/   3.hifiadapterfiltered/  5.kraken/		   6.hifiasm/	   8.hi-C.mapping/  9.3.mitoextract/	       9.yahs/	       repeats/
+[upendrabhattarai@boslogin02 scratch.backup]$ ls
+10.cpg.call/  2.bam2fastq/	      4.hifi.genomescope/  6.fastqc.filt/  7.HiCQc/	    9.2.hifiasm.hiC.0.2.trim/  9.4.blobtools/  annotation/
+10.hi-c-qc/   3.hifiadapterfiltered/  5.kraken/		   6.hifiasm/	   8.hi-C.mapping/  9.3.mitoextract/	       9.yahs/	       repeats/
+[upendrabhattarai@boslogin02 scratch.backup]$ cd 7.HiCQc/
+[upendrabhattarai@boslogin02 7.HiCQc]$ ls
+trim/  Trimmomatic.Hi-C_63752731.err  Trimmomatic.Hi-C_63752731.out  trimmomatic.sh  TruSeq3-PE-2.fa
+[upendrabhattarai@boslogin02 7.HiCQc]$ less trimmomatic.sh 
+[upendrabhattarai@boslogin02 7.HiCQc]$ ls
+trim/  Trimmomatic.Hi-C_63752731.err  Trimmomatic.Hi-C_63752731.out  trimmomatic.sh  TruSeq3-PE-2.fa
+[upendrabhattarai@boslogin02 7.HiCQc]$ cd trim/
+[upendrabhattarai@boslogin02 trim]$ ls
+multiqc_report.html				      SUB14149_A1_TdomHiC_S23_L004_R1_001.trim.fastq.gz     SUB14149_A1_TdomHiC_S23_L004_R2_001.trim.fastq.gz
+SUB14149_A1_TdomHiC_S23_L004_R1_001.trim_fastqc.html  SUB14149_A1_TdomHiC_S23_L004_R2_001.trim_fastqc.html
+[upendrabhattarai@boslogin02 trim]$ ls
+multiqc_report.html				      SUB14149_A1_TdomHiC_S23_L004_R1_001.trim.fastq.gz     SUB14149_A1_TdomHiC_S23_L004_R2_001.trim.fastq.gz
+SUB14149_A1_TdomHiC_S23_L004_R1_001.trim_fastqc.html  SUB14149_A1_TdomHiC_S23_L004_R2_001.trim_fastqc.html
+[upendrabhattarai@boslogin02 trim]$ cd ..
+[upendrabhattarai@boslogin02 7.HiCQc]$ ls
+trim/  Trimmomatic.Hi-C_63752731.err  Trimmomatic.Hi-C_63752731.out  trimmomatic.sh  TruSeq3-PE-2.fa
+[upendrabhattarai@boslogin02 7.HiCQc]$ less TruSeq3-PE-2.fa 
+[upendrabhattarai@boslogin02 7.HiCQc]$ less TruSeq3-PE-2.fa 
+
+>PrefixNX/1
+AGATGTGTATAAGAGACAG
+>PrefixNX/2
+AGATGTGTATAAGAGACAG
+>Trans1
+TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG
+>Trans1_rc
+CTGTCTCTTATACACATCTGACGCTGCCGACGA
+>Trans2
+GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
+>Trans2_rc
+CTGTCTCTTATACACATCTCCGAGCCCACGAGAC>PrefixPE/1
+AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT
+>PrefixPE/2
+CAAGCAGAAGACGGCATACGAGATCGGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCT
+>PCR_Primer1
+AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT
+>PCR_Primer1_rc
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT
+>PCR_Primer2
+CAAGCAGAAGACGGCATACGAGATCGGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCT
+>PCR_Primer2_rc
+AGATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGTCTTCTGCTTG
+>FlowCell1
+TTTTTTTTTTAATGATACGGCGACCACCGAGATCTACAC
+>FlowCell2
+TTTTTTTTTTCAAGCAGAAGACGGCATACGA>TruSeq2_SE
+AGATCGGAAGAGCTCGTATGCCGTCTTCTGCTTG
+>TruSeq2_PE_f
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT
+>TruSeq2_PE_r
+AGATCGGAAGAGCGGTTCAGCAGGAATGCCGAG>PrefixPE/1
+TACACTCTTTCCCTACACGACGCTCTTCCGATCT
+>PrefixPE/2
+GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT
+>PE1
+TACACTCTTTCCCTACACGACGCTCTTCCGATCT
+>PE1_rc
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
+>PE2
+GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT
+>PE2_rc
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC>PrefixPE/1
+TACACTCTTTCCCTACACGACGCTCTTCCGATCT
+>PrefixPE/2
+GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT>TruSeq3_IndexedAdapter
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC
+>TruSeq3_UniversalAdapter
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA
