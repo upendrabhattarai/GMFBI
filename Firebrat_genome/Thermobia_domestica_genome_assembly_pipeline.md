@@ -62,5 +62,6 @@ Number of ccs reads retained: 2492525 (99.9999% of total)
 
 Finished on Mon May 22 23:30:02 EDT 2023
 ```
-The Multiqc report after adapter filtering is (here)[multiqc_report_hifiadapterfilt.html]
+The Multiqc report after adapter filtering is [here](GMFBI/Firebrat_genome
+/multiqc_report_hifiadapterfilt.html)
 
