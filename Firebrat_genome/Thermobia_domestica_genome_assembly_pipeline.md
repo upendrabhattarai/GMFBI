@@ -62,5 +62,41 @@ Number of ccs reads retained: 2492525 (99.9999% of total)
 
 Finished on Mon May 22 23:30:02 EDT 2023
 ```
-The Multiqc report after adapter filtering is [here](multiqc_report_hifiadapterfilt.html)
+The Multiqc report after adapter filtering is [here](multiqc_report_hifiadapterfilt.html) (Need to download the html file to visualize it properly)
+
+# Removing contaminant reads
+`Kraken2` was used with the standard Kraken database to filter out contaminants.
+```
+export PATH="/n/holyscratch01/extavour_lab/Everyone/upendrabhattarai/bin/kraken2/kraken2:$PATH"
+export KRAKEN2_DB_PATH=/n/holyscratch01/extavour_lab/Everyone/upendrabhattarai/bin/kraken2/kraken-std-database
+
+## Step 1
+kraken2 --db kraken2-std --threads 20 --classified-out classified.out --unclassified-out unclassified.out --report reports.txt --use-names \
+m64408e_230106_060914.hifi_reads.filt.fasta \
+m64408e_230109_021420.hifi_reads.filt.fasta \
+m64408e_230104_191438.hifi_reads.filt.fasta \
+m64408e_230107_170457.hifi_reads.filt.fasta
+
+## Step 2
+# Extract the clean reads with no bacterial contaminants. The extract_kraken_reads.py script is a part of kraken tools. you can also find it (here)[extract_kraken_reads.py]
+export PATH="/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/software/mambaforge/bin/:$PATH"
+python ./extract_kraken_reads.py \
+       -k kraken2_61553288.out \
+       -s m64408e_230107_170457.hifi_reads.filt.fasta \
+       --output m64408e_230107_170457.hifi_reads.filt.kraken.nobac.fasta \
+       --taxid 2 \
+       --exclude \
+       --include-children \
+       --report kraken.filter.report
+
+## Step 3
+# Extract only the bacterial reads
+python ./extract_kraken_reads.py \
+        -k kraken2_61553288.out \
+        -s m64408e_230106_060914.hifi_reads.filt.fasta \
+        --output m64408e_230106_060914.hifi_onlybac.fasta \
+        --taxid 2 \
+        --include-children \
+        --report only.bac.report
+```
 
