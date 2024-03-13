@@ -43,7 +43,7 @@ transposonPSI.pl ../T.dom.Hap1.final.fa nuc
 transposonPSI_2_fasta.pl ../T.dom.Hap1.final.fa T.dom.Hap1.final.fa.TPSI.allHits.chains.bestPerLocus
 ```
 
-## LTRHarvest
+## 3. LTRHarvest
 `GenomeTools` `V.1.5.9` was used to run the ltr program
 
 find the rule file `filter_protein_match.lua` [here](filter_protein_match.lua)
@@ -100,15 +100,15 @@ repeat_regions: 13900
 target_site_duplications: 27800
 ```
 
-## Repbase
+## 4. Repbase
 I extracted Insect library from the Whole Repbasedatabase.
 RepBaseRepeatMaskerEdition-20181026 was used as a database
 Older version of `RepeatMasker-4.1.0` was used for the `queryRepeatDatabase.pl` script. You can find the script [here](queryRepeatDatabase.pl)
 
-## SINE 
+## 5. SINE 
 Database was downloaded March 7, 2023 to use with the repeat library
 
-## SRF
+## 6. SRF
 We ran Satellite repeat finder (SRF) in the QC'ed pacbio reads.
 `KMC` `V.3.2.1` (2022-01-04) and `minimap2` `V.2.26-r1175`was used
 ```
@@ -132,7 +132,7 @@ srfutils.js paf2bed srf-aln.paf > srf-aln.bed   # filter and extract non-overlap
 # Step -6
 #srfutils.js bed2abun srf-aln.bed > srf-aln.len  # calculate abundance of each srf contig
 ```
-## RepeatClassifier
+## 7. RepeatClassifier
 We concatenated all the libraries together and ran RepeatClassifier
 
 ```
@@ -171,7 +171,7 @@ faSomeRecords -exclude Combined.rep.library.minlen50.usearch.fasta.classified Un
 The final Repeat library is `Combined.rep.library.minlen50.usearch.fasta.classified.filtered`
 Find `faSomeRecords` script [here](https://github.com/santiagosnchez/faSomeRecords)
 
-## RepeatMasker
+## 8. RepeatMasker
 
 We used the finalized repeat library in above step to mask the repeats in our genome assembly with `RepeatMasker` 
 ```
