@@ -139,5 +139,29 @@ singularity exec --cleanenv /n/holylabs/LABS/extavour_lab/Users/upendrabhattarai
         --gene_trans_map pasa.gene_trnas_map.txt -O pasa.transdecoder_workdir
 
 ```
-## 6. Braker2
+## 6. Braker3
+`Braker` `V.3.0.6` was used with the protein and Hisat2 aligned RNA-seq reads
+```
+BRAKER_PATH=/n/holylabs/LABS/extavour_lab/Users/upendrabhattarai/software/braker3.sif
+PATH_TO_BAM=/n/holyscratch01/extavour_lab/Everyone/upendrabhattarai/3.Tdom.H1.annota/rna.seq.assembly.genome.guided
 
+singularity exec --cleanenv $BRAKER_PATH braker.pl \
+        --genome=../genome.2.masked/T.dom.Hap1.final.fa.masked \
+        --prot_seq=../protein/merged.ncbi.uniprot.zygentoma.proteins.2023_12_02.fasta \
+        --bam=$PATH_TO_BAM/PREP0367_UBhat16381A_A01v1_T_d_Emb_0_S1_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_A02v1_T_d_M_Go_1_S9_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_A03v1_T_d_F_Nc_2_S17_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_B01v1_T_d_Nym_0_S2_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_B02v1_T_d_M_Go_2_S10_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_B03v1_T_d_F_Nc_3_S18_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_C01v1_T_d_M_Ant_1_S3_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_C02v1_T_d_M_Go_3_S11_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_C03v1_T_d_F_Go_1_S19_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_D01v1_T_d_M_Ant_2_S4_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_D02v1_T_d_M_Wb_0_S12_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_D03v1_T_d_F_Go_2_S20_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_E01v1_T_d_M_Ant_3_S5_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_E02v1_T_d_F_Ant_1_S13_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_E03v1_T_d_F_Go_3_S21_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_F01v1_T_d_M_Nc_1_S6_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_F02v1_T_d_F_Ant_2_S14_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_F03v1_T_d_F_Wb_0_S22_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_G01v1_T_d_M_Nc_2_S7_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_G02v1_T_d_F_Ant_3_S15_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_H01v1_T_d_M_Nc_3_S8_Hap1.bam,$PATH_TO_BAM/PREP0367_UBhat16381A_H02v1_T_d_F_Nc_1_S16_Hap1.bam \
+        --species=Braker.firebrat --softmasking --threads=36
+```
+
+Statistics of braker output
+```
+Type (3rd column)       Number  Size total (kb) Size mean (bp)  % of the genome /!\Results are rounding to two decimal places 
+cds     152601  33392.40        218.82  0.59
+exon    152601  33392.40        218.82  0.59
+gene    19128   1179917.01      61685.33        20.88
+intron  129685  1503949.52      11596.94        26.61
+mrna    1372    32584.61        23749.71        0.58
+start_codon     22913   68.70   3.00    0.00
+stop_codon      22914   68.72   3.00    0.00
+transcript      22916   1537341.93      67085.96        27.20
+Total   524130  4320715.29      8243.59 76.46
+```
